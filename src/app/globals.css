@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 🎨 Tema personalizado */
+@theme {
+  --color-primary: #0d7ff2;
+  --color-accent: #f28c0d;
+  --color-dark: #0a0a0a;
+  --color-surface: #121212;
+
+  --radius-custom: 8px;
+
+  --font-sans: "Inter", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* 🌙 Base global */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark);
+  color: white;
+  font-family: var(--font-sans);
 }
+
+/* Hero background */
+.hero-gradient {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)),
+    url('https://placehold.co/1920x1080?text=Aerial+View+of+Saltillo+Mountains');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -5px rgba(13, 127, 242, 0.3);
+}
+
+.transition-custom {
+  transition: all 0.3s ease-in-out;
+}
+
