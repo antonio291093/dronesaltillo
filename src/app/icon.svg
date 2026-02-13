@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#000000"/>
+  
+  <!-- Drone body -->
+  <circle cx="256" cy="256" r="40" fill="#ffffff"/>
+  
+  <!-- Arms -->
+  <line x1="256" y1="256" x2="120" y2="120" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="392" y2="120" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="120" y2="392" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+  <line x1="256" y1="256" x2="392" y2="392" stroke="#ffffff" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Propellers -->
+  <circle cx="120" cy="120" r="30" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <circle cx="392" cy="120" r="30" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <circle cx="120" cy="392" r="30" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <circle cx="392" cy="392" r="30" fill="none" stroke="#ffffff" stroke-width="12"/>
+</svg>
