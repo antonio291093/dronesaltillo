@@ -17,7 +17,7 @@ export default function CTA() {
 
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <a
-            href="https://wa.me/528440000000"
+            href="https://wa.me/528444529997"
             className="bg-primary hover:opacity-90 text-white font-bold py-5 px-10 
                        rounded-[var(--radius-custom)] transition-all text-xl 
                        shadow-lg shadow-primary/25"
@@ -26,7 +26,7 @@ export default function CTA() {
           </a>
 
           <a
-            href="tel:+528440000000"
+            href="tel:+528444529997"
             className="bg-white hover:bg-gray-100 text-dark font-bold py-5 px-10 
                        rounded-[var(--radius-custom)] transition-all text-xl"
           >

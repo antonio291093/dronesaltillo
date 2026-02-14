@@ -36,7 +36,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-4">Redes</h4>
 
             <a
-              href="#"
+              href="https://www.tiktok.com/@saltillobonito"
               className="text-gray-400 hover:text-primary transition-colors block mb-2 flex items-center"
             >
               <svg

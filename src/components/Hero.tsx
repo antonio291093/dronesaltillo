@@ -47,7 +47,7 @@ export default function Hero() {
           
           {/* Glow Button */}
           <a
-            href="https://wa.me/528440000000"
+            href="https://wa.me/528444529997"
             className="relative bg-green-600 text-white font-bold py-4 px-8 rounded-[var(--radius-custom)] transition-all duration-300 hover:scale-105"
           >
             <span className="absolute inset-0 rounded-[var(--radius-custom)] bg-green-500 blur-xl opacity-40 animate-pulse"></span>
@@ -55,7 +55,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="tel:+528440000000"
+            href="tel:+528444529997"
             className="border-2 border-primary text-white py-4 px-8 rounded-[var(--radius-custom)] hover:bg-primary/10 transition-all duration-300"
           >
             Llámanos ahora

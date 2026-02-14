@@ -73,7 +73,7 @@ export default function Benefits() {
           <div className="bg-dark p-2 rounded-[var(--radius-custom)] border border-white/10">
             <div className="relative w-full h-96">
               <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQmyhKD1pkVfclVQ1zaTY7faEg1eHPmhXjx0FERza2eb6K40z2G9lnikyAQPn5mYEMs0FOGCt7Ytl_-CYd4qmo1VyGxCDlJUvFYehk6z5gbMSmpb0DKJNr0tZu6fO8qfg-BJX-H27JwKWBveZQmtV5-s3Rq7RF7zQ_1fUx60jmVwV_YYf-3PZvyE81mOV-aHioypCWzBc6SAkMLrb-PF0Y1feTaS02AB1O82CoRbBx0EdEDZtblcRZvQsuyfEoQ4NuLaE0KOBQJZhE"
+                src="/beneficios/saltillo.jpg"
                 alt="Equipamiento profesional"
                 fill
                 className="object-cover rounded-[var(--radius-custom)]"
