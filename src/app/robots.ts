@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://dronesaltillo.com/sitemap.xml',
+    sitemap: 'https://www.dronesaltillo.com/sitemap.xml',
   }
 }

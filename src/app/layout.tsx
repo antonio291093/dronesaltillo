@@ -4,7 +4,8 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dronesaltillo.com"),
+  metadataBase: new URL("https://www.dronesaltillo.com"),
+  alternates: { canonical: "/" },
   title: {
     default: "Drone Saltillo | Filmación y Fotografía Aérea Profesional",
     template: "%s | Drone Saltillo",
@@ -21,12 +22,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Drone Saltillo | Filmación y Fotografía Aérea Profesional",
     description:
-      "Capturamos bodas, inmobiliarias y deportes con drones 4K en Saltillo, Coahuila.",
-    url: "https://dronesaltillo.com",
+      "Fotografía y video aéreo en 4K para bodas, inmobiliarias y eventos deportivos en Saltillo, Coahuila.",
+    url: "/",
     siteName: "Drone Saltillo",
     locale: "es_MX",
     type: "website",
-    images: [{ url: "/images/hero1.jpg", width: 4000, height: 2250 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Drone Saltillo | Filmación y Fotografía Aérea Profesional",
+    description:
+      "Fotografía y video aéreo en 4K para bodas, inmobiliarias y eventos deportivos en Saltillo, Coahuila.",
   },
   robots: { index: true, follow: true },
 };
