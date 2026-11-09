@@ -1,8 +1,7 @@
+import "@fontsource-variable/archivo/wdth.css";
+import "@fontsource-variable/big-shoulders-display";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import type { Metadata } from "next";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dronesaltillo.com"),
@@ -11,8 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Drone Saltillo",
   },
   description:
-    "Servicio profesional de drones en Saltillo, Coahuila. Filmación aérea en 4K para eventos, inmobiliaria, empresas y deportes.",
-
+    "Servicio profesional de drones en Saltillo, Coahuila. Fotografía y video aéreo en 4K para bodas, eventos, inmobiliarias, empresas y deportes.",
   keywords: [
     "drones en Saltillo",
     "fotografía aérea Saltillo",
@@ -20,21 +18,21 @@ export const metadata: Metadata = {
     "video con drone 4K",
     "servicio de drones en Saltillo",
   ],
-
   openGraph: {
     title: "Drone Saltillo | Filmación y Fotografía Aérea Profesional",
     description:
-      "Capturamos eventos, inmobiliaria y deportes con drones 4K en Saltillo, Coahuila.",
+      "Capturamos bodas, inmobiliarias y deportes con drones 4K en Saltillo, Coahuila.",
     url: "https://dronesaltillo.com",
     siteName: "Drone Saltillo",
     locale: "es_MX",
     type: "website",
+    images: [{ url: "/images/hero1.jpg", width: 4000, height: 2250 }],
   },
+  robots: { index: true, follow: true },
+};
 
-  robots: {
-    index: true,
-    follow: true,
-  },
+export const viewport: Viewport = {
+  themeColor: "#0f1a2e",
 };
 
 export default function RootLayout({
@@ -43,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={inter.className}>{children}</body>
+    <html lang="es-MX">
+      <body>{children}</body>
     </html>
   );
 }

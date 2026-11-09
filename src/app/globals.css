@@ -1,38 +1,74 @@
 @import "tailwindcss";
 
-/* 🎨 Tema personalizado */
 @theme {
-  --color-primary: #0d7ff2;
-  --color-accent: #f28c0d;
-  --color-dark: #0a0a0a;
-  --color-surface: #121212;
+  /* Paleta tomada de las fotos aéreas de Saltillo */
+  --color-noche: #0f1a2e;      /* cielo al anochecer */
+  --color-pizarra: #18243c;    /* superficies */
+  --color-cal: #edefe8;        /* texto principal */
+  --color-niebla: #93a4b7;     /* bruma de la sierra, texto secundario */
+  --color-atardecer: #f29a4a;  /* línea del horizonte al atardecer */
+  --color-whatsapp: #25d366;
 
-  --radius-custom: 8px;
+  --font-sans: "Archivo Variable", system-ui, sans-serif;
+  --font-display: "Big Shoulders Display Variable", "Archivo Variable", sans-serif;
 
-  --font-sans: "Inter", sans-serif;
+  --ease-vuelo: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* 🌙 Base global */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 body {
-  background-color: var(--color-dark);
-  color: white;
+  background-color: var(--color-noche);
+  color: var(--color-cal);
   font-family: var(--font-sans);
+  font-feature-settings: "tnum" 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Hero background */
-.hero-gradient {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)),
-    url('https://placehold.co/1920x1080?text=Aerial+View+of+Saltillo+Mountains');
-  background-size: cover;
-  background-position: center;
+::selection {
+  background: var(--color-atardecer);
+  color: var(--color-noche);
 }
 
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px -5px rgba(13, 127, 242, 0.3);
+:focus-visible {
+  outline: 2px solid var(--color-atardecer);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
-.transition-custom {
-  transition: all 0.3s ease-in-out;
+/* Titulares: tipografía alta y condensada, como señalética de pista */
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
+/* Datos del visor: números tabulares para que no "brinquen" */
+.osd {
+  font-variant-numeric: tabular-nums;
+  font-stretch: 112%;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.wide {
+  font-stretch: 118%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

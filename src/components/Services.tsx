@@ -1,95 +1,80 @@
+import Image from "next/image";
+
+const services = [
+  {
+    title: "Bodas y celebraciones",
+    text: "La llegada de los invitados, la salida de la iglesia, el baile bajo las luces. Capturamos tu gran día desde ángulos que solo un dron puede alcanzar.",
+    ideal: ["Bodas", "XV años", "Aniversarios", "Eventos corporativos"],
+    img: "/portafolio/aereaatardecer.jpg",
+    alt: "Saltillo iluminado al anochecer visto desde el aire",
+  },
+  {
+    title: "Inmobiliaria e industria",
+    text: "Mostramos el terreno completo, sus accesos y su entorno con claridad. Tus propiedades residenciales e industriales se entienden de un vistazo y se venden más rápido.",
+    ideal: ["Casas y terrenos", "Naves industriales", "Desarrollos", "Avance de obra"],
+    img: "/images/hero2.jpg",
+    alt: "Vista panorámica de Saltillo y la sierra",
+  },
+  {
+    title: "Eventos deportivos",
+    text: "Seguimiento a alta velocidad para carreras, partidos y torneos. Video dinámico que transmite la energía del juego y el tamaño del evento.",
+    ideal: ["Torneos", "Carreras", "Ligas locales", "Inauguraciones"],
+    img: "/portafolio/campofutbol.jpg",
+    alt: "Cancha de fútbol con nubes y la sierra al fondo",
+  },
+];
+
 export default function Services() {
   return (
-    <section id="servicios" className="py-24 bg-surface">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        <h2 className="text-3xl md:text-5xl font-bold mb-16">
-          Servicios <span className="text-primary">Especializados</span>
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          {/* Card 1 */}
-          <div className="bg-dark p-8 rounded-custom border border-white/5 hover:scale-105 transition-all duration-300">
-            <div className="w-16 h-16 bg-primary/10 flex items-center justify-center rounded-full mx-auto mb-6">
-              <svg
-                className="w-8 h-8 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-              </svg>
-            </div>
-
-            <h3 className="text-xl font-bold mb-4">Magia y Emoción</h3>
-
-            <p className="text-gray-400">
-              Bodas y celebraciones transformadas en recuerdos eternos.
-              Capturamos la esencia y la alegría de tu gran día desde
-              ángulos que solo un dron puede alcanzar.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-dark p-8 rounded-custom border border-white/5 hover:scale-105 transition-all duration-300">
-            <div className="w-16 h-16 bg-primary/10 flex items-center justify-center rounded-full mx-auto mb-6">
-              <svg
-                className="w-8 h-8 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-              </svg>
-            </div>
-
-            <h3 className="text-xl font-bold mb-4">Perspectiva Estratégica</h3>
-
-            <p className="text-gray-400">
-              Ventas más rápidas con impacto visual garantizado.
-              Mostramos el valor real de tus propiedades industriales
-              y residenciales con claridad absoluta.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-dark p-8 rounded-custom border border-white/5 hover:scale-105 transition-all duration-300">
-            <div className="w-16 h-16 bg-primary/10 flex items-center justify-center rounded-full mx-auto mb-6">
-              <svg
-                className="w-8 h-8 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-              </svg>
-            </div>
-
-            <h3 className="text-xl font-bold mb-4">Eventos Deportivos</h3>
-
-            <p className="text-gray-400">
-              Seguimiento de alta velocidad para carreras, fútbol y torneos.
-              Vídeo dinámico que transmite la emoción del juego.
-            </p>
-          </div>
-
+    <section id="servicios" className="relative py-24 md:py-36">
+      <div className="mx-auto max-w-[88rem] px-5 md:px-10">
+        <div className="grid gap-6 md:grid-cols-12 md:items-end">
+          <h2 className="display text-[clamp(3rem,7vw,6rem)] uppercase md:col-span-7">
+            Lo que volamos
+          </h2>
+          <p className="max-w-md text-lg leading-relaxed text-niebla md:col-span-5 md:justify-self-end">
+            Tres tipos de trabajo, el mismo equipo. Cada vuelo se planea según el
+            lugar, la hora de luz y lo que necesitas mostrar.
+          </p>
         </div>
+
+        <ul className="mt-16 border-t border-cal/15 md:mt-24">
+          {services.map((s) => (
+            <li
+              key={s.title}
+              className="group grid gap-8 border-b border-cal/15 py-10 md:grid-cols-12 md:gap-10 md:py-14"
+            >
+              <h3 className="display text-[clamp(2.4rem,4.6vw,4.25rem)] uppercase transition-colors duration-300 group-hover:text-atardecer md:col-span-5">
+                {s.title}
+              </h3>
+
+              <div className="md:col-span-4">
+                <p className="text-lg leading-relaxed text-cal/85">{s.text}</p>
+                <p className="mt-6 text-sm text-niebla">Ideal para</p>
+                <ul className="mt-2 flex flex-wrap gap-2">
+                  {s.ideal.map((i) => (
+                    <li
+                      key={i}
+                      className="rounded-full border border-cal/20 px-3 py-1 text-sm text-cal/85"
+                    >
+                      {i}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="relative aspect-[16/10] overflow-hidden md:col-span-3 md:aspect-[4/5]">
+                <Image
+                  src={s.img}
+                  alt={s.alt}
+                  fill
+                  sizes="(min-width: 768px) 25vw, 100vw"
+                  className="object-cover transition-transform duration-700 ease-[var(--ease-vuelo)] group-hover:scale-105"
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
